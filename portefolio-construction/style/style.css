@@ -1,20 +1,22 @@
-*{
-    background-image: url(/photosPortefolio/IMG_5732_2.jpg);
+body{
+    background-image: url(images/photosPortefolio/IMG_5732_2.jpg);
     margin: 0 auto;
     padding: 0 auto;
     width: auto;
 }
 
-header nav{
-    background-image: url(/photosPortefolio/20210811_IMG_0683\ \(2\).JPG);
+nav#menu{
+    background-image: url(images/photosPortefolio/20210811_IMG_0683\(2\).JPG);
     width: 1280px;
+    max-width: max-content;
+    display: flex;
 }
 
 #menu{
     text-align: center;
     justify-content: space-between;
     position: sticky;
-    display:flexbox;
+
 }
 
 #menu ul{
