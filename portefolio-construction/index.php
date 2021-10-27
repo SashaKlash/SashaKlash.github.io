@@ -4,7 +4,7 @@
     // Chargement des dépendances
     require_once "config.php"; // configuration
 
-    // Si on aun fichier de fonctions, on le charge ici.
+    // Si on a un fichier de fonctions, on le charge ici.
 
     // Si on a besoin de se connecter à une base de données, on se connecte ici.
 
@@ -13,7 +13,7 @@
     if(!isset($_GET['pg'])){
         // chargement de l'accueil
 
-        include_once "import/index.php";
+        include_once "import/home.php";
     }else{
         switch($_GET['pg']){
             case "cv":
@@ -29,11 +29,17 @@
                 include_once "import/galerie.php";
                 break;
             case "contact":
-                include_once "import/contact";
+                include_once "import/contact.php";
+                break;
+            case "admin";
+                include_once "import/admin.php";
+                break;
+            case "lien":
+                include_once "import/liens.php";
                 break;
         default:
                 // chargement de la page d'accueil.
-                include_once "import/index.php";
+                include_once "import/home.php";
         }
     }
 ?>
