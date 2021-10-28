@@ -13,10 +13,10 @@
     ?>
 
     <div class="container cartouche">
-        <div class="intro"></div>
-        <div class="intro"></div>
-        <div class="intro"></div>
-        <div class="intro"></div>
+        <div class="intro cercle"></div>
+        <div class="intro cercle"></div>
+        <div class="intro cercle"></div>
+        <div class="intro cercle"></div>
     </div>
 </body>
 </html>
