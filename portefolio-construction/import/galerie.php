@@ -14,7 +14,7 @@
     
     <?php
     // on peut importer le menu en PHP sans passer par index.php
-    include "menu.php";
+    include "header.php";
     ?>
     <h1>Galerie</h1>
 </body>
