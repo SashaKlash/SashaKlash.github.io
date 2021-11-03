@@ -17,5 +17,6 @@
     include "header.php";
     ?>
     <h1>Je me présente</h1>
-</body>
-</html>
+    <?php
+        include_once "footer.php"
+    ?>

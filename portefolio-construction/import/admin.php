@@ -17,5 +17,7 @@
     include "header.php";
     ?>
     <h1>Section Administration</h1>
-</body>
-</html>
+
+    <?php
+        include_once "footer.php"
+    ?>

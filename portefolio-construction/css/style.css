@@ -1,21 +1,21 @@
 body{
-    background-image: url(/portefolio-construction/images/photosPortefolio/balade.jpg);
-    background-color: white;
-    opacity: 0.6;
-    background-repeat: no-repeat;
+    background-color: rgba(100, 100, 100, 0.8);
+    opacity: 0.8;
     margin: 0 auto;
     padding: 0 auto;
-    background-size:cover;
 }
+
+/* Barre de navigation */
 
 nav#menu{
     background-image: url(/portefolio-construction/images/photosPortefolio/20210811_IMG_0683\(2\).JPG);
     background-repeat: no-repeat;
-    width:fit-content;
+    width:auto;
     text-align: center;
     height: 3em;
     align-items: center;
     display: grid;
+    margin: 0 20px auto;
 }
 
 #menu ul{
@@ -29,17 +29,40 @@ nav#menu{
 
 #menu ul li a{
     text-decoration: none;
+    padding: 0 5px;
+}
+
+/* Apparence générale */
+
+#logoTypo{
+    font-size:2em;
 }
 
 h1{
     color: #269e2a;
 }
 
-.cercle{
-    width:25%;
-    height: auto;
+/* Page "home.php" */
+
+.cartouche{
+    width:80%;
+    height: 60vh;
     border: solid 5px #09330a;
     padding: 5px;
     margin: 5px;
     display: grid;
+    margin: 0 20px 0 20px;
 }
+
+.cercle{
+    width:150px;
+    height: 150px;
+    border: 5px solid #09330A;
+    border-radius: 50%;
+    margin:5px;
+    line-height: 2em;
+    text-align: center;
+    align-items: center;
+}
+
+

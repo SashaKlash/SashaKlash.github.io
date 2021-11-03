@@ -11,12 +11,11 @@
     <?php
         include "header.php";
     ?>
-
-    <div class="container cartouche">
-        <div class="intro cercle"></div>
-        <div class="intro cercle"></div>
-        <div class="intro cercle"></div>
-        <div class="intro cercle"></div>
-    </div>
-</body>
-</html>
+    <section class="cartouche">
+        <div class="cercle">
+            <p id=logoTypo>S</p>
+        </div>
+    </section>
+    <?php
+        include_once "footer.php"
+    ?>
