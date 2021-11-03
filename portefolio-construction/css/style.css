@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(100, 100, 100, 0.8);
+    background-color: #88C7BC;
     opacity: 0.8;
     margin: 0 auto;
     padding: 0 auto;
@@ -8,7 +8,7 @@ body{
 /* Barre de navigation */
 
 nav#menu{
-    background-image: url(/portefolio-construction/images/photosPortefolio/20210811_IMG_0683\(2\).JPG);
+    background-color: #964F4CFF;
     background-repeat: no-repeat;
     width:auto;
     text-align: center;
@@ -19,6 +19,7 @@ nav#menu{
 }
 
 #menu ul{
+    color: white;
     list-style-type: none;
 }
 
@@ -36,6 +37,16 @@ nav#menu{
 
 #logoTypo{
     font-size:2em;
+}
+
+footer{
+    width:80%;
+    margin: auto;
+}
+
+footer p{
+    padding: 10px;
+    text-align: center;
 }
 
 h1{
