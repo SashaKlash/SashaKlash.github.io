@@ -11,11 +11,6 @@
     <?php
         include "header.php";
     ?>
-    <div class="cartouche">
-        <div class="cercle">
-            <p id=logoTypo>S</p>
-        </div>
-    </div>
 
     <?php
         include_once "footer.php"

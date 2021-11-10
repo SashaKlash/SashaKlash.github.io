@@ -1,11 +1,16 @@
+
+
 body{
-    background-color: #B1A09B;
-    opacity: 0.8;
+    background-image: url("../images/panneauxTagCentreBruxelles.JPG");
+    background: cover;
+    opacity: 1;
     margin: 0 auto;
     padding: 0 auto;
+    display: grid;
+    width: auto;
 }
 
-/* Barre de navigation */
+/* Barre de navigatiaon */
 
 nav#menu{
     background-color: #FEECE6;
@@ -49,6 +54,7 @@ nav#menu{
 
 #logoTypo{
     font-size:2em;
+    font-family:cursive, sans-serif;
 }
 
 footer{
@@ -69,12 +75,20 @@ h1{
 
 .cartouche{
     width:auto;
-    height: 60vh;
+    height: minmax(30vh, auto);
     border: solid 5px #09330a;
     padding: 5px;
     margin: 5px auto;
     display: grid;
     margin: 0 20px 0 20px;
+}
+
+.align-items-center{
+    align-items:center
+}
+
+.justify-content-center{
+    justify-content:center;
 }
 
 .cercle{
@@ -85,7 +99,14 @@ h1{
     margin:5px;
     line-height: 2em;
     text-align: center;
-    align-items: center;
+    position:relative;
+}
+
+#logoTypo{
+    transform: rotate(45deg);
+    position: absolute;
+    top:20px;
+    left:75px;
 }
 
 
