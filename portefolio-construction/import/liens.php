@@ -17,6 +17,21 @@
     include "header.php";
     ?>
     <h1>Liens</h1>
+    <main class="liens">
+    <section class=" CSS">
+        <ul>
+            <li><a href="https://fr.freepik.com/vecteurs-libre/tasse-cafe-expresso-grains-cafe_10578326.htm#page=1&position=8&from_view=search">FreePik</a><p>Ici, tu peux developper...</p></li>
+            <li><a href="https://coolors.co">Coolors</a><p>Ici, tu peux choisir de magnifiques couleurs chatoyantes !</p></li>
+        </ul>
+    </sec
+    <section class="HTML"></section>
+    <section class="JS"></section>
+    <section class="image">
+        <ul>
+            <li><a href="https://www.pngwing.com/">pngwing</a></li>
+        </ul>
+    </section>
+    </main>
     <?php
         include_once "footer.php"
     ?>
