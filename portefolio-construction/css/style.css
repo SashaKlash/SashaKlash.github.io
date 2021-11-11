@@ -8,8 +8,6 @@ body{
     opacity: 0.8;
     margin: 0 auto;
     padding: 0 auto;
-    display:grid;
-    position:relative;
     height:auto;
     box-sizing: border-box;
 }
@@ -21,41 +19,61 @@ nav#menu{
     background-repeat: no-repeat;
     background-size: cover;
     width:auto;
+    box-sizing: border-box;
     text-align: center;
-    height: minmax(5em,  auto);
+    height: minmax(75px, auto);
     align-items: center;
     justify-content: center;
-    display: grid;
     position: sticky;
-    top: 5px;
+    top: 0;
     z-index: 100;
     margin: 0 auto;
-    box-sizing: border-box;
     overflow:hidden;
     border-radius: 25px;
 }
+nav#menu2{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px;
+    border-radius: 10px;
+    position: sticky;
+}
 
 #menu ul{
+    display:inline-grid;
     color: #0e6966;
     list-style-type: none;
 }
 
 #menu ul li {
-    display: inline;
-    padding: 2em;
+    position:relative;
+    padding: 1em;
     flex-wrap: wrap;
 }
 
-#menu ul li:hover{
-    background-color: #FAD7C4;
-    opacity:0.5;
-}
-
 #menu ul li a{
+    cursor:pointer;
+    position:absolute;
+    transition:0.5s;
     text-decoration: none;
     padding: 0 5px;
-    font-size: 1.5em;
     line-height: 1.5em;
+    font-size: 1.5em;
+}
+#menu ul li a:hover{
+    cursor:pointer;
+    opacity:1;
+    transform: translateY(5px);
+    animation-duration:4s;
+}
+
+#menu ul li a:hover::after {
+    content:'\00bb';
+    position: absolute;
+    opacity: 1;
+    top: -1px;
+    right:-10px;
+    transition: 1.5s;
 }
 
 #menu ul li a:visited{
@@ -64,12 +82,13 @@ nav#menu{
 
 #menu ul li a:active{
     color:#d64a1f;
+    transform: translateY(4px);
 }
 
 /* Apparence générale */
 
 #logoTypo{
-    font-size:2em;
+    font-size:4em;
     font-family: cursive,sans-serif;
 }
 
@@ -80,16 +99,28 @@ nav#menu{
     padding: 5px;
     margin: 0 0px auto;
     display: grid;
-    position:sticky;
+    position:relative;
     top:minmax(5em, auto);
     border-radius:25px;
-    transition: width 5s;
+    transition: transform 5s ease;
 }
+
+@keyframes reduceWidth50{
+    from{width:auto;}
+    to{width:50%;}
+}
+
 div.cartouche:hover{
-    width:50%;
+    background-color: salmon;
+    animation-name:reduceWidth50;
+    animation-duration:5s;
     justify-content: center;
+    align-items: center;
     margin: auto;
-    transition-timing-function:ease;
+    animation-direction:alternate;
+    animation-iteration-count:2;
+    animation-timing-function:ease-out;
+    animation-fill-mode: both;
 }
 
 footer{

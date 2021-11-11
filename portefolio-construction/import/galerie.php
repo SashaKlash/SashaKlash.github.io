@@ -17,6 +17,7 @@
     include "header.php";
     ?>
     <h1>Galerie</h1>
+    <
     <?php
         include_once "footer.php"
     ?>
