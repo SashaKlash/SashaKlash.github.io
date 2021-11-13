@@ -17,6 +17,16 @@
     include "header.php";
     ?>
     <h1>Galerie</h1>
-    <?php
+    <section id=>
+      <h2>Galerie Photo</h2>
+      <div class="gallery-img img"></div>
+      <div class="gallery-img img"></div>
+      <div class="gallery-img img"></div>
+      <div class="gallery-img img"></div>
+      <div class="gallery-img img"></div>
+      <div class="gallery-img img"></div>
+      <div class="gallery-img img "></div>
+    </section>
+      <?php
         include_once "footer.php"
     ?>
