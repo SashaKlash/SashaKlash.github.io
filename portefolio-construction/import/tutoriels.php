@@ -12,6 +12,14 @@
         include "header.php";
     ?>
     <h1>Tutoriels</h1>
+    <p>Je vous présente ici deux tutoriels différents qui traitent du même sujet, à savoir le postionnement en HTML3 et CSS4.</p>
+    <section class="tuto1">
+
+    </section>
+    <section class="tuto2">
+        
+    </section>
+
     <?php
         include_once "footer.php"
     ?>

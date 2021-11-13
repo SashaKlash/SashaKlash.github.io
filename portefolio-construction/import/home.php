@@ -12,6 +12,14 @@
         include "header.php";
     ?>
 
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 id="bonjour">Bonjour !</h1>
+            <h1 id="welcome">Welcome</h1>
+            <h3 id="iam">J'apprends le web developpement.</h3>
+        </div>
+    </div>
+
     <?php
         include_once "footer.php"
     ?>
