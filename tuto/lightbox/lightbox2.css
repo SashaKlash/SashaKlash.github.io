@@ -63,11 +63,6 @@ body{font-family:Arial, Helvetica, sans-serif}
     color:white;
 }
 
-/* Modal Content */
-.modal-content{
-
-}
-
 /* Add Animation */
 @keyframes animatetop{
     from {top: -300px;
