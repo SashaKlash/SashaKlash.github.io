@@ -137,14 +137,6 @@ div.hero-text h1{
     left:75px;
 }
 
-/* Page "liens.php" */
-
-main.liens{
-    background-image:linear-gradient(135deg, #ffad33ff, #e7804eff, #cd1610ff, #fdd422ff, #ff8e37ff, #654b1eff);
-}
-
-/* Page "home.php" */
-
 .hero-image{
     background: url(../images/gareDeBudaBruxelles.JPG) no-repeat center;
     background-size:cover;
@@ -160,4 +152,20 @@ main.liens{
     left:50%;
     transform:translate(-50%, -50%);
     color:white;
+}
+
+/* Page "liens.php" */
+
+main.liens{
+    background-image:linear-gradient(135deg, #ffad33ff, #e7804eff, #cd1610ff, #fdd422ff, #ff8e37ff, #654b1eff);
+}
+
+/* Page "tuto" */
+main.tuto{
+    grid-template-areas:
+        "tuto-galerie1" "tuto-galerie2" "navDroite"
+        "tuto-galerie1" "tuto-galerie2" "navDroite"
+        "tuto-galerie1" "tuto-galerie2" "navDroite";
+    grid-template-columns: 2fr 2fr 1fr;
+
 }
