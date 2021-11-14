@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 /*
 
+=======
+>>>>>>> 564c9c209dab6f7d9675f1823d18584bc5a8e875
 *, *::before, *::after{
     padding:0;
     margin:0;
@@ -93,7 +96,11 @@ footer img{
     width: 100px;
     position: absolute;
     transform: translateX(-100vw);
+<<<<<<< HEAD
 }
 
 */
 
+=======
+}
+>>>>>>> 564c9c209dab6f7d9675f1823d18584bc5a8e875

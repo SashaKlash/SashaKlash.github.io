@@ -17,4 +17,8 @@ const myArray = ["eat", "sleep", "code"];
 
 sessionStorage.setItem("mySessionStore", myArray);
 const mySessionData = sessionStorage.getItem("mySessionStore");
+<<<<<<< HEAD
 console.log(mySessionData);
+=======
+console.log(typeof mySessionData);
+>>>>>>> 564c9c209dab6f7d9675f1823d18584bc5a8e875
