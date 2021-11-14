@@ -15,13 +15,15 @@ body{
 /* Barre de navigation */
 
 nav#menu{
+    display: flex;
+    position: relative;
     background-image:url(../images/20210811_IMG_0683\(2\).JPG);
     background-repeat: no-repeat;
     background-size: cover;
-    width:auto;
+    width:100%;
+    min-height: 50px;
     box-sizing: border-box;
     text-align: center;
-    height: minmax(75px, auto);
     align-items: center;
     justify-content: center;
     position: sticky;
@@ -39,23 +41,20 @@ nav#menu2{
     position: sticky;
 }
 
-#menu ul{
-    display:inline-grid;
+#menu a{
+    float:right;
     color: #0e6966;
     list-style-type: none;
-}
-
-#menu ul li {
     position:relative;
     padding: 1em;
     flex-wrap: wrap;
+    cursor:pointer;
+    text-decoration: none;
 }
 
 #menu ul li a{
-    cursor:pointer;
     position:absolute;
     transition:0.5s;
-    text-decoration: none;
     padding: 0 5px;
     line-height: 1.5em;
     font-size: 1.5em;
@@ -92,7 +91,7 @@ nav#menu2{
     font-family: cursive,sans-serif;
 }
 
-.cartouche{
+header{
     width:auto;
     height: minmax(30vh, auto);
     border: solid 5px #09330a;
