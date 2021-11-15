@@ -15,10 +15,12 @@ body{
 /* Barre de navigation */
 header{
     display:flex;
-    min-width: auto;
+    min-width 300px;
+    overflow: hidden;
+    position:relative;
 }
 
-#banniere{
+img#banniere{
     background-image: url("../images/logo361x361.png");
     max-width: 180px;
     height: 180px;
@@ -29,8 +31,7 @@ header{
 
 
 nav#menu{
-    display: flex;
-    position: relative;
+    display: flexbox;
     background-image:url("../images/sky.JPG");
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,12 +50,11 @@ nav#menu{
 }
 
 #menu a{
-    float:right;
     color: #0e6966;
     list-style-type: none;
     position:static;
     padding: 1em;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     cursor:pointer;
     text-decoration: none;
     transition:0.5s;
