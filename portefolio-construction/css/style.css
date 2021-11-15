@@ -13,11 +13,23 @@ body{
 }
 
 /* Barre de navigation */
+header{
+    display:flex;
+}
+
+#banniere{
+    background-image: url(../images/logo361x361.png);
+    max-width: 180px;
+    height: 180px;
+    background-size: cover;
+    z-index:200;
+}
+
 
 nav#menu{
     display: flex;
     position: relative;
-    background-image:url(../images/20210811_IMG_0683\(2\).JPG);
+    background-image:url(../images/sky.JPG);
     background-repeat: no-repeat;
     background-size: cover;
     width:100%;
