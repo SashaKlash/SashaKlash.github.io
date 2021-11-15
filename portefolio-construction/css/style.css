@@ -15,7 +15,7 @@ body{
 /* Barre de navigation */
 header{
     display:flex;
-    min-width 300px;
+    min-width: 300px;
     overflow: hidden;
     position:relative;
 }
