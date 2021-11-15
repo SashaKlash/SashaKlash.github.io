@@ -7,7 +7,7 @@ if(galleryImages){
         image.onclick = function(){
             let getElementCss = window.getComputedStyle(image);
             let getFullImgUrl = getElementCss.getPropertyValue("background-image");
-            let getImgUrlPos = getFullImgUrl.split("/img/thumb/");
+            let getImgUrlPos = getFullImgUrl.split("/portefolio-construction/images/thumb/");
             let setNewImgUrl = getImgUrlPos[1].replace('")','');
             
             getLatestOpenedImg = index + 1;
@@ -20,7 +20,7 @@ if(galleryImages){
 
             let newImg = document.createElement("img");
             newImageWindow.appendChild(newImg);
-            newImg.setAttribute("src", "img/" + setNewImgUrl);
+            newImg.setAttribute("src", "images/" + setNewImgUrl);
             newImg.setAttribute("id", "current-img");
 
             newImg.onload = function(){
@@ -70,14 +70,14 @@ function changeImg(changeDir){
         }
 
     }else if(changeDir === 0){
-        calcNewImg = getLatestOpenedImg + 1;
-        if(calcNewImg < 1){
+        calcNewImg = getLatestOpenedImg - 1;
+        if(calcNewImg === 1){
            calcNewImg = galleryImages.lenght;
         }
     }
     
 
-    newImg.setAttribute("src", "/img/img" + calcNewImg + ".JPG");
+    newImg.setAttribute("src", "/portefolio-construction/images/img" + calcNewImg + ".JPG");
     newImg.setAttribute("id", "current-img");
 
     getLatestOpenedImg = calcNewImg;
