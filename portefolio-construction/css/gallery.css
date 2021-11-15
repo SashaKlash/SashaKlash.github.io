@@ -31,32 +31,32 @@
 
 #index-gallery .img1 {
     grid-area:img1;
-    background-image: url("../img/thumb/img1.JPG");
+    background-image: url("/portefolio-construction/images/thumb/img1.JPG");
 }
 #index-gallery .img2 {
     grid-area:img2;
-    background-image: url("../img/thumb/img2.JPG");
+    background-image: url("/portefolio-construction/images/thumb/img2.JPG");
 }
 #index-gallery .img3 {
     grid-area:img3;
-    background-image: url("../img/thumb/img3.JPG");
+    background-image: url("/portefolio-construction/images/thumb/img3.JPG");
     height:610px;
 }
 #index-gallery .img4 {
     grid-area:img4;
-    background-image: url("../img/thumb/img4.JPG");
+    background-image: url("/portefolio-construction/images/thumb/img4.JPG");
 }
 #index-gallery .img5 {
     grid-area:img5;
-    background-image: url("../img/thumb/img5.JPG");
+    background-image: url("/portefolio-construction/images/thumb/img5.JPG");
 }
 #index-gallery .img6 {
     grid-area:img6;
-    background-image: url("../img/thumb/img6.JPG");
+    background-image: url("/portefolio-construction/images/thumb/img6.JPG");
 }
 #index-gallery .img7 {
     grid-area:img7;
-    background-image: url("../img/thumb/img7.JPG");
+    background-image: url("/portefolio-construction/images/img/thumb/img7.JPG");
 }
 
 /* Gallery image titles */
