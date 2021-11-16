@@ -26,15 +26,15 @@
 
 #index-gallery .img1 {
     grid-area:img1;
-    background-image: url("/portefolio-construction/images/thumb/img1.JPG");
+    background-image: url("../images/thumb/img1.JPG");
 }
 #index-gallery .img2 {
     grid-area:img2;
-    background-image: url("/portefolio-construction/images/thumb/img2.JPG");
+    background-image: url("../images/thumb/img2.JPG");
 }
 #index-gallery .img3 {
     grid-area:img3;
-    background-image: url("/portefolio-construction/images/thumb/img3.JPG");
+    background-image: url("../images/thumb/img3.JPG");
     height:610px;
 }
 #index-gallery .img4 {
