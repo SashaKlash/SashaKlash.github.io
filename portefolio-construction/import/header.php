@@ -1,4 +1,4 @@
-<header>
+<header class="cartouche">
     <h2>Sasha De Ruyver</h2>
     <p>Stagiaire en Web Developpement Back et Front End</p>
     <nav id="menu">
