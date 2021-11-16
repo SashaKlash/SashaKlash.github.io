@@ -39,19 +39,19 @@
 }
 #index-gallery .img4 {
     grid-area:img4;
-    background-image: url("/portefolio-construction/images/thumb/img4.JPG");
+    background-image: url("/../images/thumb/img4.JPG");
 }
 #index-gallery .img5 {
     grid-area:img5;
-    background-image: url("/portefolio-construction/images/thumb/img5.JPG");
+    background-image: url("/../images/thumb/img5.JPG");
 }
 #index-gallery .img6 {
     grid-area:img6;
-    background-image: url("/portefolio-construction/images/thumb/img6.JPG");
+    background-image: url("/../images/thumb/img6.JPG");
 }
 #index-gallery .img7 {
     grid-area:img7;
-    background-image: url("/portefolio-construction/images/thumb/img7.JPG");
+    background-image: url("/../images/thumb/img7.JPG");
 }
 
 /* Gallery image titles */

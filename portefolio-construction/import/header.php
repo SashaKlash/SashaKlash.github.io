@@ -1,14 +1,32 @@
-<header class="cartouche">
-    <h2>Sasha De Ruyver</h2>
-    <p>Stagiaire en Web Developpement Back et Front End</p>
-    <nav id="menu">
-        <img id="banniere">
-        <a href="./?pg=home" class="nav" id="">Accueil</a>
-        <a href="./?pg=photo" class="nav" id="">Galerie</a>
-        <a href="./?pg=lien" class="nav" id="">Liens</a>
-        <a href="./?pg=tuto" class="nav" id="">Tutoriels</a>
-        <a href="./?pg=contact" class="nav" id="">Contact</a>
-        <a href="./?pg=cv" class="nav" id="">CV</a>
-        <a href="./?pg=admin" class="nav" id="">Admin</a>
-    </nav>
-</header>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?php 
+            if(isset($_GET['pg'])){
+                switch($_GET['pg']){
+                    case "cv";
+                        echo "CV";
+                        break;
+                    case "cv";
+                        echo "CV";
+                        break;
+                
+                }
+            }
+        ?>
+    </title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+        <?php
+    
+        ?>
+    <link type="text/css" rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+<?php 
+    include_once "import/menu.php";

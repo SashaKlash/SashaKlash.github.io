@@ -10,6 +10,8 @@
 
     // Routeur
 
+    include_once "import/header.php";
+
     if(!isset($_GET['pg'])){
         // chargement de l'accueil
 
@@ -42,4 +44,6 @@
                 include_once "import/home.php";
         }
     }
+    
+    include_once "import/footer.php"
 ?>
