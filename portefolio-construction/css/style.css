@@ -1,5 +1,4 @@
 body{
-    /* background-image: url("../images/centraleHydrolique_1904x1192.JPG"); */
     background-image:linear-gradient(135deg, #ffad33ff, #e7804eff, #cd1610ff);
     background-color: #B1A09B;
     background-size: cover;
@@ -7,31 +6,33 @@ body{
     width: 95%;
     opacity: 1;
     margin: 0 auto;
-    padding: 0 auto;
+    padding:0;
     height:100vh;
     box-sizing: border-box;
 }
 
 /* Barre de navigation */
 header{
-    display:flex;
+    display:grid;
     min-width: 300px;
     overflow: hidden;
     position:relative;
+    width:fit-content;
+    height: minmax(30vh, auto);
+    border: solid 5px #09330a;
+    padding: 5px;
+    margin: 0 0px auto;
+    top:minmax(5em, auto);
+    border-radius:25px;
+    transition: transform 5s ease;
 }
 
-img#banniere{
-    background-image: url("../images/logo361x361.png");
-    max-width: 180px;
-    height: 180px;
-    background-size: cover;
-    z-index:200;
-    flex:right;
+.cartouche h2, .cartouche p{
+    display:block;
+    align-items: center;
 }
-
 
 nav#menu{
-    display: flexbox;
     background-image:url("../images/sky.JPG");
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,6 +50,15 @@ nav#menu{
     border-radius: 25px;
 }
 
+img#banniere{
+    float:left;
+    background-image: url("../images/logo361x361.png");
+    min-width: 180px;
+    height: 180px;
+    background-size: cover;
+    z-index:200;
+}
+
 #menu a{
     color: #0e6966;
     list-style-type: none;
@@ -62,10 +72,6 @@ nav#menu{
     font-size: 1.5em;
 }
 
-#menu ul li a{
-    padding: 0 5px;
-    
-}
 #menu a:hover{
     cursor:pointer;
     opacity:1;
@@ -98,18 +104,7 @@ nav#menu{
     font-family: cursive,sans-serif;
 }
 
-header{
-    width:auto;
-    height: minmax(30vh, auto);
-    border: solid 5px #09330a;
-    padding: 5px;
-    margin: 0 0px auto;
-    display: grid;
-    position:relative;
-    top:minmax(5em, auto);
-    border-radius:25px;
-    transition: transform 5s ease;
-}
+
 
 @keyframes reduceWidth50{
     from{width:auto;}
