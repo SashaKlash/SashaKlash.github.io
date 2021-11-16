@@ -1,5 +1,4 @@
-
-    <h1>Galerie</h1>
+<h1>Galerie</h1>
 
     <section id="index-gallery" class="wrapper-gallery">
         <h2>Ma Galerie Photo</h2>

@@ -7,13 +7,13 @@
             <h2>Comment réaliser une galerie photo avec CSS et/ou Javascript (sans jQuery)</h2>
             <article class="tutoGood">
                 <h3>Tutoriel video de Dani Krossing sur <a href="https://www.youtube.com/watch?v=dkLpo4shS6c" target="_blank">YouTube</a></h3>
-                <p>Ce tutoriel est en anglais. Dani explique de façon très claire comment structurer correctement une galerie photo en lui ajoutant une fonctionnalité "Lightbox" à l'aide de JavaScript.<br>Sa présentation est très fluide et permet de comprendre pas à pas les différentes liaisons qu'il faut établir pour faire correctement fonctionner les codes HTML, CSS et Javascript ensemble.
+                <p>Ce tutoriel est en anglais. Dani explique de façon très claire comment structurer correctement une galerie photo en lui ajoutant une fonctionnalité "Lightbox" à l'aide de JavaScript.<br>Sa présentation est très fluide et permet de comprendre pas à pas les différentes liaisons qu'il faut établir pour faire correctement fonctionner les codes HTML, CSS et Javascript ensemble.</p>
                 <ul>
                     <li>Organisation de la structure en HTML</li>
                     <li>Utilisation du grid pour le style en CSS</li>
                     <li>Utilisation de JavaScript pour ajouter un Lightbox</li>
                 </ul>
-                <br>Ce tuto à été pour ma part très instructif.</p>
+                <p>Ce tuto à été pour ma part très instructif.</p>
             </article>
 
         </section>

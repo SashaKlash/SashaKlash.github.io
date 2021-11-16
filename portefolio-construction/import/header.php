@@ -6,27 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
         <?php 
+            // if(isset($_GET['pg'])){
+            //     switch($_GET['pg']){
+            //         case "home";
+            //             echo "Accueil";
+            //             break;
+            //         case "galerie";
+            //             echo "Galerie";
+            //             break;
+            //         case "tuto";
+            //             echo "Tutoriel";
+            //             break;
+            //         case "liens";
+            //             echo "Liens";
+            //             break;
+            //         case "contact";
+            //             echo "Contact";
+            //             break;
+            //         case "cv";
+            //             echo "CV";
+            //             break;
+            //         case "admin";
+            //             echo "Admin";
+            //             break;
+            //     }
+            // }
+
             if(isset($_GET['pg'])){
-                switch($_GET['pg']){
-                    case "cv";
-                        echo "CV";
-                        break;
-                    case "cv";
-                        echo "CV";
-                        break;
-                
+                if(in_array($_GET['pg'], IMPORT)){
+                    echo $_GET['pg'].".php";
                 }
-            }
+            }else{echo "circulez...";}
         ?>
     </title>
-    <link type="text/css" rel="stylesheet" href="css/reset.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
-        <?php
-    
-        ?>
-    <link type="text/css" rel="stylesheet" href="css/gallery.css">
 </head>
 <body>
-
 <?php 
-    include_once "import/menu.php";
+    include_once "IMPORT/menu.php";
+?>

@@ -9,41 +9,24 @@
     // Si on a besoin de se connecter à une base de données, on se connecte ici.
 
     // Routeur
+    include_once "IMPORT/header.php";
 
-    include_once "import/header.php";
+    // si il existe une variable GET nommée 'pg'
+    if(isset($_GET['pg'])){
 
-    if(!isset($_GET['pg'])){
-        // chargement de l'accueil
+    // si on est dans la white liste (voir IMPORT dans config.php), utilisation de la commande in_array("recherché","array")=> true si dans la liste, false sinon
+    if(in_array($_GET['pg'], IMPORT)){
 
-        include_once "import/home.php";
+        // appel du fichier souhaité
+        include_once "IMPORT/".$_GET['pg'].".php";
     }else{
-        switch($_GET['pg']){
-            case "cv":
-                // import du cv
-                include_once "import/curriculum.php";
-                break;
-            case "tuto":
-                // import de la pages des tutos
-                include_once "import/tutoriels.php";
-                break;
-            case "photo":
-                //import de la page galerie
-                include_once "import/galerie.php";
-                break;
-            case "contact":
-                include_once "import/contact.php";
-                break;
-            case "admin";
-                include_once "import/admin.php";
-                break;
-            case "lien":
-                include_once "import/liens.php";
-                break;
-        default:
-                // chargement de la page d'accueil.
-                include_once "import/home.php";
-        }
+        // 
+        include "IMPORT/erreur404.php";
     }
-    
-    include_once "import/footer.php"
-?>
+// pas de variable $_GET['pg'], nous sommes sur l'accueil    
+}else{
+    // appel de l'accueil 
+    include "IMPORT/home.php";
+}
+
+include_once "import/footer.php";
