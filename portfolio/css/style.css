@@ -104,15 +104,14 @@ header.entete{
     gap:15px;
     position:sticky;
     top:0;
+    left:0;
     background-color:var(--mandarin);
-    width:90%;
-    height: 40px;
-    margin:auto;
+    width:100%;
+    height: 50px;
+    margin: 0 auto;
     box-sizing: border-box;
     z-index: 100;
     display:none;
-    text-align: center;
-    padding: 0 20px;
 }
 
 .menu_hamburger{
@@ -120,21 +119,22 @@ header.entete{
     color: var(--field-drab);
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
-    width:250px;
+    width:0%;
     height:auto;
     padding:10px;
     position:absolute;
     top:75px;
     left:-270px;
-    transition: left 500ms ease 0ms;
+    transition: left 500ms ease 500ms;
 }
 
 .menu_hamburger.affiche{
-    left:0;
+    left:25px;
     transition: left 1s linear 0s;
-    display: block;
+    display: sticky;
+    top:75px;
     float: none;
-    width:100%;
+    width:95%;
     z-index:200;
 }
 
@@ -143,6 +143,8 @@ header.entete{
     color:var(--cyber-yellow);
     font-size:150%;
     display: block;
+    width:100px;
+    padding: 0 40px;
     
 }
 
@@ -237,6 +239,7 @@ main {
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
+    padding:15px;
 
     /* zone avec le contenu principal des pages */
     grid-area: contenu;
@@ -679,14 +682,25 @@ span.psw {
         }
         
     #menu {
-        display:block;   /* on affiche cette zone pour les écrans moyens */
+        display:block;
+        position:sticky;
+        top: 0;
+        padding: 15px 0;
+        margin: 5px auto;   /* on affiche cette zone pour les écrans moyens */
+        text-align: center;
+    }
+
+    #menu a{
+        padding: 0 20px;
     }
 
     .galerie {
         grid-template-columns: 1fr 1fr;
     }
     
-    
+    .hamburger{
+        display:none;
+    }
 }
 
 
@@ -704,22 +718,15 @@ span.psw {
         display:block;   /* on affiche cette zone pour les grands écrans */
         background-color:#CCC;  /* couleur de fond pour toute la colonne de gauche */
         height:100%;
-        /* on annule cette hauteur car le UL doit occuper toute la hauteur du menu */
-        /*height: 50px;*/
-        
-
-        /* on efface la bordure inutile dans la colonne */
         border:none;
-        border-radius: 0;
-
-        /* on annule les espaces de part et d'autre du menu */
+        border-radius: 5px;
         padding:0 10px;
     }
     
     #menu a {
         float:none;     /* l'élément de menu n'est plus positionné en flottant */
-        padding: 10px 10px;   /* on annule les espacements */
-        width:100%;     /* l'élément de menu occupe toute la largeur de sa zone (ul) */
+        padding: 10px 10px;
+        width:100%;
     }
     
 
