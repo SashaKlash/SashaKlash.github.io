@@ -65,6 +65,7 @@ function changeImg(changeDir){
     let calcNewImg;
     if(changeDir === 1){
         calcNewImg = getLatestOpenedImg + 1;
+
         if(calcNewImg > galleryImages.length){
             calcNewImg = 1;
         }

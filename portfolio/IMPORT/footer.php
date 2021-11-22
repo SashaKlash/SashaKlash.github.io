@@ -1,4 +1,3 @@
-
       <hr>
       <footer>
           <p>Copyright 2021 - Sasha De Ruyver - Travail effectué dans le cadre de ma formation "Web Developper Full" au CF2m.</p>

@@ -1,4 +1,4 @@
-            <main>
+         <main>
                 <h1>Section Administration</h1> 
                 <!-- ##################################### -->
 
@@ -33,3 +33,4 @@
                 </div>
             </main>
         </div>
+
