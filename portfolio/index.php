@@ -30,5 +30,5 @@
         }
 
     include_once "IMPORT/footer.php";
+?>
 
-        ?>

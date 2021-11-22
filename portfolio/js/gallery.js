@@ -65,14 +65,15 @@ function changeImg(changeDir){
     let calcNewImg;
     if(changeDir === 1){
         calcNewImg = getLatestOpenedImg + 1;
-        if(calcNewImg > galleryImages.lenght){
+
+        if(calcNewImg > galleryImages.length){
             calcNewImg = 1;
         }
 
     }else if(changeDir === 0){
         calcNewImg = getLatestOpenedImg - 1;
         if(calcNewImg < 0){
-           calcNewImg = galleryImages.lenght;
+           calcNewImg = galleryImages.length;
         }
     }
     
