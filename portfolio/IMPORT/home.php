@@ -12,5 +12,5 @@
                     J'ai alors décidé que cette situation n'arriverais pas deux fois et je me suis mis à réfléchir comment réorienter ma carrière. J'ai fait le point sur ce que je voulais obtenir dans mon prochain métier. J'ai ainsi compris que j'aime analyser ce qu'il se passe et corriger les problèmes. <br>D'autres raisons multiples m'ont naturellement guidé sur la voie du Web devellopement.</p>
                     <p>J'ai débuté il y a cinq mois une formation pour devenir Web Developper et j'ai plongé dans le monde du code que je ne connaissais que théoriquement grâce à la Mathématique. C'était ma matière préférée et mon option tout au long de mes années d'école secondaire (entre mes 12 et mes 18 ans).<br>La programmation en JavaScript me donne parfois du fil à retordre mais constater une interaction avec des pages internet et un bout de code que j'ai entièrement écrit me pousse en avant et m'encourage d'autant plus à "ouvrir le capot".
                 </section>
+                <div id="droitPresentation"></div>
             </main>
-        </div>
