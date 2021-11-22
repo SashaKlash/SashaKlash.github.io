@@ -226,12 +226,33 @@ header.entete{
   transform: scale(0);
 }
 
+/* contenu des pages */
+
+main {
+    /* on annule la largeur fixe
+	width:1280px;
+    */
+	text-align:justify;
+	background-color:rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    /* zone avec le contenu principal des pages */
+    grid-area: contenu;
+}
+
+main p, main ul, main h2, main h3 {
+    margin: 20px 30px;
+	font-size:20px;
+}
+    
 /* ===================================================== */
 /* Page "home.php" */
 
 #presentation{
     width: 50%;
-    margin:auto;
+    margin:0 auto;
     outline: 3px solid green;
 }
 
@@ -278,6 +299,7 @@ main.liens{
         'JS JS image image'
         'JS JS image image';
     margin: 0 auto;
+    gap:25px;
 }
 
 .CSS{
@@ -346,7 +368,7 @@ main.containerTuto{
     "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
     "img1 img2 img3 img4"
     "img5 img6 img3 img7";
-    width:80%;
+    width:100%;
     height:auto;
     margin: auto;
 }
@@ -402,6 +424,7 @@ main.containerTuto{
     height:100%;
     background-color:#000;
     opacity:0;
+    text-align: center;
     display:flex;
     justify-content:center;
     align-items:center;

@@ -52,4 +52,3 @@ if (isset($_POST["name"]) && isset($_POST["mail"]) && isset($_POST["msg"])) {
                         <input type="submit" value="Envoyer">
                     </form>
                 </main>
-            </div>
