@@ -1,4 +1,4 @@
-            <main class="containerTuto">
+    <main class="containerTuto">
                 <h1>Tutoriels</h1>
                 <p id="tutoDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quas ratione optio fuga in beatae. Aspernatur tenetur veniam vitae. Rerum iusto iure non laboriosam repellat recusandae assumenda error soluta aut voluptatum blanditiis, quas quis veritatis alias reprehenderit, perspiciatis minima. Fuga aliquam ullam ducimus molestiae iste. Harum earum fugit facilis quam?</p>
                 <h2 id="titreChoixTuto">Comment réaliser une galerie photo avec CSS et/ou Javascript (sans jQuery)</h2>

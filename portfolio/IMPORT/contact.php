@@ -46,9 +46,10 @@ if (isset($_POST["name"]) && isset($_POST["mail"]) && isset($_POST["msg"])) {
                 <h1>Envoyez moi un message !</h1>
 
                     <form id="contactForm" method="post" action="">
-                        <label for="name">Nom :</label><input type="text" id="name" placeholder="Votre nom" name="name" required /></br>
-                        <label for="mail">Mail :</label><input type="text" id="mail" placeholder="Votre email" name="mail" required /></br>
-                        <label for="msg">Message :</label><textarea id="msg" placeholder="Votre message" name="msg" col="40" rows="5" required></textarea></br>
+                        <label for="name">Nom :</label><input type="text" id="name" placeholder="Votre nom" name="name" required>
+                        <label for="mail">Mail :</label><input type="text" id="mail" placeholder="Votre email" name="mail" required>
+                        <label for="msg">Message :</label><textarea id="msg" placeholder="Votre message" name="msg" col="40" rows="5" required></textarea>
                         <input type="submit" value="Envoyer">
                     </form>
                 </main>
+            </div>

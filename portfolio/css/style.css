@@ -9,13 +9,13 @@
 }
 
 @font-face {
-    font-family: "Roboto_Mono";
-    src: url("./ressourcesEtLiens/Roboto_Mono");
-    font-variant: font-variant;
-    
-    font-weight: font-weight;
+    font-family: 'Roboto Mono';
+    src: url("/portfolio/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype");
+    font-variant:normal;
+        font-weight: font-weight;
     font-style: font-style;
     size-adjust: size-adjust;
+
     /* ascent-override: ascent-override; */
     /* descent-override: descent-overrid; */
     /* line-gap-override: line-gap-override; */
@@ -23,6 +23,23 @@
     /* font-variation-settings: font-variation-settings; */
     /* font-stretch: font-stretch; */
 }
+
+@font-face{
+    font-family: 'Josefin Sans', sans-serif;
+    src: url("/portfolio/fonts/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: italic;
+}
+
+@font-face{
+    font-family: "Tommy Lee";
+    src: url("/portfolio/fonts/Tommy\ Lee.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: 'Special Elite', cursive;
+    src: url("/portfolio/fonts/Special_Elite/SpecialElite-Regular.ttf") format("truetype");
+}
+
 /* ===================================================== */
 /* Apparence générale */
 
@@ -30,8 +47,10 @@ body{
     background-image:linear-gradient(135deg, #ffad33ff, #e7804eff, #cd1610ff);
     background-size: cover;
     background-repeat: no-repeat;
+    width: 95%;
+    height: max-content;
     width: 90%;
-    height: auto;
+    height: max-contetn;
     opacity: 1;
     margin: auto;
     padding:0;
@@ -40,6 +59,7 @@ body{
 
 #global{
     width:100%;
+    height: auto;
     display:grid;
     gap:5px;
     grid-template-areas:
@@ -48,8 +68,8 @@ body{
 }
 
 footer{
-    width:80%;
-    margin: auto;
+    width:100%;
+    margin:  0 auto;
 }
 
 footer p{
@@ -57,15 +77,14 @@ footer p{
     text-align: center;
 }
 
-
 /* Police de caractère par défaut */
 p{
-    font-family: "Arial, Helvetica", sans-serif;
+    font-family: "Roboto Mono", Helvetica, sans-serif;
     font-size:16px;
 }
 
 h2{
-    font-family: "Roboto_Mono", Helvetica, sans-serif;
+    font-family: "Roboto Mono", Helvetica, sans-serif;
     font-size: 32px;
 }
 
@@ -85,33 +104,59 @@ header.entete{
     box-sizing: border-box;
     width:100%;
     height: auto;
-    border: 5px solid  #09330a;
+    outline: 1px solid  #09330a;
     padding: 0 5px;
     margin: 0 auto;
     border-radius:25px;
+}
+
+main {
+	  text-align:left;
+	  background-color:rgba(0,0,0,0.1);
+    border-radius: 10px;
+    grid-area: contenu;
+}
+
+main p, main ul, main h2, main h3 {
+    margin: 5px 10px;
 }
 
 .cartouche{
     grid-area:cartouche;
     justify-content:center;
     text-align:center;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+}
+
+.cartouche h2{
+    font-family: "Special Elite";
+    font-size: 50px;
 }
 
 #menu{
     grid-area:menu;
-    display:grid;
+    display:none;
     grid-template-areas: 'Ac G L T C CV Ad';
     gap:15px;
     position:sticky;
     top:0;
-    left:0;
     background-color:var(--mandarin);
     width:100%;
-    height: 50px;
-    margin: 0 auto;
+    height: 3em;
+    margin:auto;
     box-sizing: border-box;
     z-index: 100;
     display:none;
+    text-align: center;
+    padding: 0 20px;
+    border-radius: 20px 25px 20px;
+}
+
+#menu a{
+    padding: 0 5px;
+    border-bottom: 3px solid transparent;
+    font-family: "Roboto Mono", monospace;
 }
 
 .menu_hamburger{
@@ -119,22 +164,21 @@ header.entete{
     color: var(--field-drab);
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.8);
-    width:0%;
+    width:250px;
     height:auto;
     padding:10px;
     position:absolute;
     top:75px;
     left:-270px;
-    transition: left 500ms ease 500ms;
+    transition: left 1s ease 500ms;
 }
 
 .menu_hamburger.affiche{
-    left:25px;
-    transition: left 1s linear 0s;
-    display: sticky;
-    top:75px;
+    left:0;
+    transition: left 1s linear 500ms;
+    display: block;
     float: none;
-    width:95%;
+    width:100%;
     z-index:200;
 }
 
@@ -143,26 +187,22 @@ header.entete{
     color:var(--cyber-yellow);
     font-size:150%;
     display: block;
-    width:100px;
-    padding: 0 40px;
-    
 }
 
 .liensNav{
     display:inline-block;
     color: #07423b;
     list-style-type: none;
-    
     cursor:pointer;
     text-decoration: none;
-    padding: 5px 0;
+    padding: 0 1px;
+    margin: 0 5px;
     line-height: 40px;
     height:40px;
     font-family:"Roboto_Mono", sans-serif;
     font-size: 20px;
     text-align:center;
-    transition:transform 0.5s ease-in, color, top 0.5s, border-bottom 0.5s;
-    
+    transition:transform 0.5s ease-in, color, top 0.5s, border-bottom-color 0.5s;    
 }
 
 #lienAcceuil{grid-area:Ac;}
@@ -173,50 +213,45 @@ header.entete{
 #lienCV{grid-area:CV;}
 #lienAdmin{grid-area:Ad;}
 
-.liensNav:hover{
+#menu a:hover{
     cursor:pointer;
     opacity:1;
-    color: rgba(255, 255, 255, 0.541);
-    border-bottom:var(--rosso-corsa);}
-
-.lienNav:hover::after {
-    content:'\00bb';
-    position: absolute;
-    opacity: 1;
-    top: 16px;
-    right:-5px;
+    border-bottom-color:var(--rosso-corsa);
 }
 
 #menu a:visited{
     color: #07423b;
 }
 
-.liensNav:active, .liensNav:active::after{
+#menu a:active, #menu a:active:after{
     top: 6px;
+    border-bottom:var(--mandarin);
 }
 
 .hamburger {
-    display: block;
-    position:sticky;
     z-index:10;
     top: 50px;
     left:50px;
     transform: translate(-50%, -50%);
-    position: absolute;
+    position: fixed;
     width: 50px;
     cursor:pointer;
 }
-  
+
 .hamburger:before,
 .hamburger:after,
 .hamburger div {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 6px;
-  border-radius: 3px;
-  margin: 7px 0;
-  transition: 0.5s;
+    background: #fff;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+    background-color: var(--princeton-orange);
+    border: 1px solid rgba(0,0,0,0.7);
+}
+
 }
 .hamburger:hover:before {
   transform: translateY(12px) rotate(135deg);
@@ -229,33 +264,12 @@ header.entete{
 }
 
 /* contenu des pages */
-
-main {
-    /* on annule la largeur fixe
-	width:1280px;
-    */
-	text-align:justify;
-	background-color:rgba(0,0,0,0.1);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    padding:15px;
-
-    /* zone avec le contenu principal des pages */
-    grid-area: contenu;
-}
-
-main p, main ul, main h2, main h3 {
-    margin: 20px 30px;
-	font-size:20px;
-}
-    
 /* ===================================================== */
 /* Page "home.php" */
 
 #presentation{
-    width: 50%;
-    margin:0 auto;
+    width: 75%;
+    margin:0;
     outline: 3px solid green;
 }
 
@@ -268,8 +282,9 @@ main p, main ul, main h2, main h3 {
 }
 
 .hero-image{
-    background: url("../images/gareDeBudaBruxelles.JPG") no-repeat center;
+    background: url("../images/globe-background.png") no-repeat center;
     background-size:cover;
+    background-position: center center;
     height: 500px;
     position:relative;
     border-radius:25px;
@@ -282,11 +297,12 @@ main p, main ul, main h2, main h3 {
     left:50%;
     transform:translate(-50%, -50%);
     color:white;
+    font-size: 36px;
 }
 
 div.hero-text h1{
+    font-family:"Roboto Mono", monospace;
     color: rgba(107, 10, 6, 0.856);
-    font-size:3em;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 /* ===================================================== */
@@ -324,20 +340,29 @@ main.liens{
 
 /* ===================================================== */
 /* Page "tuto" */
+main.containerTuto h1{
+    grid-area:titre;
+}
+
 main.containerTuto{
     display:grid;
     width:100%;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-        'pTuto pTuto pTuto pTuto'
-        'h2Tuto h2Tuto h2Tuto h2Tuto'
-        'tutoGood tutoGood tutoBad tutoBad'
-        'tutoGood tutoGood tutoBad tutoBad'
-        'choixTuto choixTuto choixTuto choixTuto';
+        'titre .'
+        'pTuto pTuto'
+        'h2Tuto h2Tuto'
+        'tutoGood tutoBad'
+        'tutoGood tutoBad'
+        'choixTuto choixTuto';
     grid-gap: 5px;
     padding: 5px;
     margin: 5px;
 }
 
+.liens section, .containerTuto article{
+    box-shadow: 7px 3px 4px rgba(0,0,0,0.4);
+}
 #tutoDescription{
     grid-area: pTuto;
 }
@@ -348,10 +373,12 @@ main.containerTuto{
 
 .tutoGood{
     grid-area:tutoGood;
+    width:100%;
 }
 
 .tutoBad{
     grid-area:tutoBad;
+    width:100%;
 }
 
 .choixTuto{
@@ -364,13 +391,18 @@ main.containerTuto{
 /* Gallery container */
 #index-gallery{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr;
     grid-template-rows:auto;
     grid-gap:10px;
     grid-template-areas:
-    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
-    "img1 img2 img3 img4"
-    "img5 img6 img3 img7";
+    "gallery-h2"
+    "img1"
+    "img2"
+    
+    "img4"
+    "img5""img3"
+    "img6"
+    "img7";
     width:100%;
     height:auto;
     margin: auto;
@@ -477,7 +509,6 @@ main.containerTuto{
     top:48vh;
     right:48vw;
     z-index:500;
-    font-family: Arial, Helvetica, sans-serif;
     color:#fff;
     cursor:pointer;
     text-transform:uppercase;
@@ -550,6 +581,7 @@ button:hover {
 
 .container {
   padding: 16px;
+  height: 100%;
 }
 
 span.psw {
@@ -572,7 +604,7 @@ span.psw {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 300; /* Sit on top */
     padding-top: 50px; /* Location of the box */
     left: 0;
     top: 0;
@@ -635,6 +667,7 @@ span.psw {
     margin: 0 auto;
     font-size:20px;
     box-sizing:border-box;
+    text-align: center;
 }
 
 #contactForm label{
@@ -667,6 +700,7 @@ span.psw {
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
+  border-radius:25px;
   cursor: pointer;
   width: auto;
 }
@@ -679,59 +713,80 @@ span.psw {
             "entete"
             "menu"
             "contenu";
-        }
+    }
         
     #menu {
-        display:block;
-        position:sticky;
-        top: 0;
-        padding: 15px 0;
-        margin: 5px auto;   /* on affiche cette zone pour les écrans moyens */
-        text-align: center;
-    }
-
-    #menu a{
-        padding: 0 20px;
+        display:block;   /* on affiche cette zone pour les écrans moyens */
+        
     }
 
     .galerie {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .hamburger{
         display:none;
     }
+
+    #index-gallery{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows:auto;
+        grid-gap:10px;
+        grid-template-areas:
+        "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+        "img1 img2 img3 img4"
+        "img5 img6 img3 img7";
+        width:100%;
+        height:auto;
+        margin: auto;
+    }
 }
-
-
 /* ============ ECRANS de largeur supérieure à 1280px ================== */
 @media screen and (min-width:1280px) {
     #global {
         /* définition de la grille de mise en page */
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: 1fr 6fr;
         grid-template-areas:
         "menu entete"
         "menu contenu";
     }
     
     #menu {
-        display:block;   /* on affiche cette zone pour les grands écrans */
-        background-color:#CCC;  /* couleur de fond pour toute la colonne de gauche */
-        height:100%;
+        display:grid;   /* on affiche cette zone pour les grands écrans */
+        background-color:var(--cyber-yellow);  /* couleur de fond pour toute la colonne de gauche */
         border:none;
-        border-radius: 5px;
-        padding:0 10px;
+        border-radius: 0 5px 5px 0;
+        grid-template-areas: 'Ac' 'G' 'L' 'T' 'C' 'CV' 'Ad';
+        width: 100%;
+        position:relative;
+        top:0;
+        left:0;
     }
     
     #menu a {
+        box-sizing:border-box;
         float:none;     /* l'élément de menu n'est plus positionné en flottant */
-        padding: 10px 10px;
-        width:100%;
+        padding: 0px 10px; 
+        margin:0px 10px;
+        height: 2em;
+        width:100%;     /* l'élément de menu occupe toute la largeur de sa zone (ul) */
     }
     
-
-    .galerie {
-        grid-template-columns: 1fr 1fr 1fr;
+    .hamburger{
+        display:none;
     }
-        
-}
+
+    #index-gallery{
+        display:grid;
+        grid-template-rows:auto;
+        grid-gap:10px;
+        grid-template-areas:
+        "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+        "img1 img2 img3 img4"
+        "img5 img6 img3 img7";
+        width:100%;
+        height:auto;
+        margin: auto;
+    }
+  
