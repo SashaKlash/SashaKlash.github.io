@@ -4,9 +4,9 @@
     // Chargement des dépendances
     require_once "config.php"; // configuration
 
-    // Si on a un fichier de fonctions, on le charge ici.
+    // fonctions,  ici.
 
-    // Si on a besoin de se connecter à une base de données, on se connecte ici.
+    // se connecter à une base de données, ici.
 
     // Routeur
     include_once "IMPORT/header.php";
