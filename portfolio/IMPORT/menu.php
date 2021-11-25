@@ -1,6 +1,6 @@
                 <header class="entete">
                 <div class="cartouche">
-                    <h2>Sasha De Ruyver</h2>
+                    <h2>Sasha De&#8239;Ruyver</h2>
                     <h3>Stagiaire en Web Developpement Back et Front End</h3>
                 </div>
             </header>
