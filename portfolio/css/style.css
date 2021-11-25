@@ -1,0 +1,795 @@
+:root{
+    /* Coolors Exported Palette - https://coolors.co/ffad33-e7804e-cd1610-fdd422-ff8e37-654b1e */
+    --bright-yellow-crayola: #ffad33ff;
+    --mandarin: #e7804eff;
+    --rosso-corsa: #cd1610ff;
+    --cyber-yellow: #fdd422ff;
+    --princeton-orange: #ff8e37ff;
+    --field-drab: #654b1eff;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url("/portfolio/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf") format("truetype");
+    font-variant:normal;
+    
+    /* font-weight:;*/
+    /* font-style:;*/
+    /* size-adjust:;*/
+    /* ascent-override: ascent-override; */
+    /* descent-override: descent-overrid; */
+    /* line-gap-override: line-gap-override; */
+    /* font-feature-settings:font-feature-settings;  */
+    /* font-variation-settings: font-variation-settings; */
+    /* font-stretch: font-stretch; */
+}
+
+@font-face{
+    font-family: 'Josefin Sans', sans-serif;
+    src: url("/portfolio/fonts/JosefinSans-Italic-VariableFont_wght.ttf") format("truetype");
+    font-weight: italic;
+}
+
+@font-face{
+    font-family: "Tommy Lee";
+    src: url("/portfolio/fonts/Tommy\ Lee.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: 'Special Elite', cursive;
+    src: url("/portfolio/fonts/Special_Elite/SpecialElite-Regular.ttf") format("truetype");
+}
+/* ===================================================== */
+/* Apparence générale */
+
+body{
+    background-image:linear-gradient(135deg, #ffad33ff, #e7804eff, #cd1610ff);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 95%;
+    height: max-content;
+    opacity: 1;
+    margin: auto;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#global{
+    width:100%;
+    height: auto;
+    display:grid;
+    gap:5px;
+    grid-template-areas:
+        'entete'
+        'contenu';
+}
+
+footer{
+    width:100%;
+    margin:  0 auto;
+}
+
+footer p{
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Police de caractère par défaut */
+p{
+    font-family: "Roboto Mono", Helvetica, sans-serif;
+    font-size:16px;
+}
+
+h2{
+    font-family: "Roboto Mono", Helvetica, sans-serif;
+    font-size: 32px;
+}
+
+/* Barre de navigation */
+
+header.entete{
+    grid-area: entete;
+    display:grid;
+    position: relative;
+    grid-template-areas:
+        '. . . cartouche . . .'
+        'menu menu menu menu menu menu menu ';
+    background-image:url("../images/sky.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center center;
+    box-sizing: border-box;
+    width:100%;
+    height: auto;
+    outline: 1px solid  #09330a;
+    padding: 0 5px;
+    margin: 0 auto;
+    border-radius:25px;
+}
+
+main {
+	text-align:left;
+	background-color:rgba(0,0,0,0.1);
+    border-radius: 10px;
+    grid-area: contenu;
+}
+
+main p, main ul, main h2, main h3 {
+    margin: 5px 10px;
+}
+   
+
+.cartouche{
+    grid-area:cartouche;
+    justify-content:center;
+    text-align:center;
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+}
+
+.cartouche h2{
+    font-family: "Special Elite";
+    font-size: 50px;
+}
+
+#menu{
+    grid-area:menu;
+    display:none;
+    grid-template-areas: 'Ac G L T C CV Ad';
+    gap:15px;
+    position:sticky;
+    top:0;
+    background-color:var(--mandarin);
+    width:100%;
+    height: 3em;
+    margin:auto;
+    box-sizing: border-box;
+    z-index: 100;
+    display:none;
+    text-align: center;
+    padding: 0 20px;
+    border-radius: 20px 25px 20px;
+}
+
+#menu a{
+    padding: 0 5px;
+    border-bottom: 3px solid transparent;
+    font-family: "Roboto Mono", monospace;
+    
+}
+
+.menu_hamburger{
+    display: block;
+    color: var(--field-drab);
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.8);
+    width:250px;
+    height:auto;
+    padding:10px;
+    position:absolute;
+    top:75px;
+    left:-270px;
+    transition: left 1s ease 0ms;
+}
+
+.menu_hamburger.affiche{
+    left:0;
+    transition: left 1s linear 0s;
+    display: block;
+    float: none;
+    width:100%;
+    z-index:200;
+}
+
+.menu_hamburger a{
+    text-decoration: none;
+    color:var(--cyber-yellow);
+    font-size:150%;
+    display: block;
+    
+}
+
+.liensNav{
+    display:inline-block;
+    color: #07423b;
+    list-style-type: none;
+    cursor:pointer;
+    text-decoration: none;
+    padding: 0 1px;
+    margin: 0 5px;
+    line-height: 40px;
+    height:40px;
+    font-family:"Roboto_Mono", sans-serif;
+    font-size: 20px;
+    text-align:center;
+    transition:transform 0.5s ease-in, color, top 0.5s, border-bottom-color 0.5s;
+    
+}
+
+#lienAcceuil{grid-area:Ac;}
+#lienGalerie{grid-area:G;}
+#lienLiens{grid-area:L;}
+#lienTutoriels{grid-area:T;}
+#lienContact{grid-area:C;}
+#lienCV{grid-area:CV;}
+#lienAdmin{grid-area:Ad;}
+
+#menu a:hover{
+    cursor:pointer;
+    opacity:1;
+    border-bottom-color:var(--rosso-corsa);
+}
+
+#menu a:visited{
+    color: #07423b;
+}
+
+#menu a:active, #menu a:active:after{
+    top: 6px;
+    border-bottom:var(--mandarin);
+}
+
+.hamburger {
+    z-index:10;
+    top: 50px;
+    left:50px;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    width: 50px;
+    cursor:pointer;
+}
+
+.hamburger:before,
+.hamburger:after,
+.hamburger div {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+    background-color: var(--princeton-orange);
+    border: 1px solid rgba(0,0,0,0.7)
+}
+.hamburger:hover:before {
+  transform: translateY(12px) rotate(135deg);
+}
+.hamburger:hover:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.hamburger:hover div {
+  transform: scale(0);
+}
+
+/* contenu des pages */
+ 
+/* ===================================================== */
+/* Page "home.php" */
+
+#presentation{
+    width: 75%;
+    margin:0;
+    outline: 3px solid green;
+}
+
+.align-items-center{
+    align-items:center;
+}
+
+.justify-content-center{
+    justify-content:center;
+}
+
+.hero-image{
+    background: url("../images/globe-background.png") no-repeat center;
+    background-size:cover;
+    background-position: center center;
+    height: 500px;
+    position:relative;
+    border-radius:25px;
+}
+
+.hero-text{
+    text-align:center;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    color:white;
+    font-size: 36px;
+}
+
+div.hero-text h1{
+    font-family:"Roboto Mono", monospace;
+    color: rgba(107, 10, 6, 0.856);
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+/* ===================================================== */
+/* Page "liens.php" */
+
+main.liens{
+    display:grid;
+    top:50%;
+    left:50%;
+    grid-template-areas: 
+        'CSS CSS HTML HTML'
+        'CSS CSS HTML HTML'
+        'JS JS image image'
+        'JS JS image image';
+    margin: 0 auto;
+    gap:25px;
+}
+
+.CSS{
+    grid-area:CSS;
+    width: auto;
+}
+
+.HTML{
+    grid-area: HTML;
+}
+
+.JS{
+    grid-area:JS;
+}
+
+.image{
+    grid-area:image;
+}
+
+/* ===================================================== */
+/* Page "tuto" */
+main.containerTuto h1{
+    grid-area:titre;
+}
+
+main.containerTuto{
+    display:grid;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'titre .'
+        'pTuto pTuto'
+        'h2Tuto h2Tuto'
+        'tutoGood tutoBad'
+        'tutoGood tutoBad'
+        'choixTuto choixTuto';
+    grid-gap: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.liens section, .containerTuto article{
+    box-shadow: 7px 3px 4px rgba(0,0,0,0.4);
+}
+
+#tutoDescription{
+    grid-area: pTuto;
+}
+
+#titreChoixTuto{
+    grid-area:h2Tuto;
+}
+
+.tutoGood{
+    grid-area:tutoGood;
+    width:100%;
+}
+
+.tutoBad{
+    grid-area:tutoBad;
+    width:100%;
+}
+
+.choixTuto{
+    grid-area:choixTuto;
+    width: 100%;
+}
+/* ===================================================== */
+/* Page Galerie */
+
+/* Gallery container */
+#index-gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:auto;
+    grid-gap:10px;
+    grid-template-areas:
+    "gallery-h2"
+    "img1"
+    "img2"
+    
+    "img4"
+    "img5""img3"
+    "img6"
+    "img7";
+    width:100%;
+    height:auto;
+    margin: auto;
+}
+
+#index-gallery a:hover{
+    cursor:cell;
+}
+
+.gallery-img{
+    cursor:pointer;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Images */
+#index-gallery h2{
+    grid-area: gallery-h2;
+}
+#index-gallery .img1 {
+    grid-area:img1;
+    background-image: url("../images/thumb/img1.JPG");
+}
+#index-gallery .img2 {
+    grid-area:img2;
+    background-image: url("../images/thumb/img2.JPG");
+}
+#index-gallery .img3 {
+    grid-area:img3;
+    background-image: url("../images/thumb/img3.JPG");
+    height:610px;
+}
+#index-gallery .img4 {
+    grid-area:img4;
+    background-image: url("../images/thumb/img4.JPG");
+}
+#index-gallery .img5 {
+    grid-area:img5;
+    background-image: url("../images/thumb/img5.JPG");
+}
+#index-gallery .img6 {
+    grid-area:img6;
+    background-image: url("../images/thumb/img6.JPG");
+}
+#index-gallery .img7 {
+    grid-area:img7;
+    background-image: url("../images/thumb/img7.JPG");
+}
+
+/* Gallery image titles */
+.gallery-img div{
+    width:100%;
+    height:100%;
+    background-color:#000;
+    opacity:0;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: box-shadow 0.5s, opacity 0.5s;
+}
+
+.gallery-img div:hover{
+    opacity: 0.5;
+    box-shadow: 10px 10px 10px rgb(37, 17, 17);
+}
+
+.gallery-img a{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:18px;
+    color:#ffffff;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+/* Popup window when clicked */
+.img-window{
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0.8);
+    position:fixed;
+    top: 0;
+    left:0;
+    cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    z-index:100;
+}
+
+.img-window img{
+    max-height: 80vh;
+    max-width:80vw;
+}
+
+/* Next image */
+.img-btn-next{
+    display:block;
+    padding:6px 10px;
+    border-radius:4px;
+    background-color: rgb(42, 182, 30);
+    position:fixed;
+    top:48vh;
+    right:48vw;
+    z-index:500;
+    font-family: 'Roboto Mono', Helvetica, sans-serif;
+    color:#fff;
+    cursor:pointer;
+    text-transform:uppercase;
+}
+
+.img-btn-next:hover{
+    opacity:0.8;
+}
+
+.img-btn-prev{
+    display:block;
+    padding:6px 10px;
+    border-radius:4px;
+    background-color: rgb(119, 26, 26);
+    position:fixed;
+    top:48vh;
+    left:48vw;
+    z-index:500;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#fff;
+    cursor:pointer;
+    text-transform:uppercase;
+}
+
+.img-btn-prev:hover{
+    opacity:0.8;
+}
+
+/* ===================================================== */
+/* Section Administration */
+
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  width: 25%;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 16px;
+  height: 100%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 300; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0; z-index: 300} 
+  to {top:25px; opacity:1; z-index:300}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:25px; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    position: absolute;
+    top:5px;
+    right:15px;
+  }
+  
+.close:hover,
+.close:focus {
+    color: rgb(141, 37, 37);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* ===================================================== */
+/* Contact */
+
+#contactForm {
+    width:600px;
+    margin: 0 auto;
+    font-size:20px;
+    box-sizing:border-box;
+    text-align: center;
+}
+
+#contactForm label{
+    display:inline-block;
+    height:40px;
+    line-height:40px;
+    width:200px;
+    text-align:right;
+}
+
+#contactForm input{
+    height: 40px;
+    width: 400px;
+    margin-bottom:5px;
+}
+
+#contactForm textarea{
+    resize:none;
+    width: 400px;
+    height: 80px;
+}
+
+#contactForm label[for="msg"]{
+    float:left;
+}
+
+#contactForm input[type="submit"] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius:25px;
+  cursor: pointer;
+  width: auto;
+}
+/* ============ ECRANS de largeur entre 800px et 1280px ================ */
+@media screen and (min-width:800px) and (max-width:1279px) {
+
+    #global {
+            /* définition de la grille de mise en page */
+            grid-template-areas:
+            "entete"
+            "menu"
+            "contenu";
+    }
+        
+    #menu {
+        display:block;   /* on affiche cette zone pour les écrans moyens */
+    }
+
+    .galerie {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hamburger{
+        display:none;
+    }
+
+    #index-gallery{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows:auto;
+        grid-gap:10px;
+        grid-template-areas:
+        "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+        "img1 img2 img3 img4"
+        "img5 img6 img3 img7";
+        width:100%;
+        height:auto;
+        margin: auto;
+    }
+}
+
+/* ============ ECRANS de largeur supérieure à 1280px ================== */
+@media screen and (min-width:1280px) {
+    #global {
+        /* définition de la grille de mise en page */
+        grid-template-columns: 1fr 6fr;
+        grid-template-areas:
+        "menu entete"
+        "menu contenu";
+    }
+    
+    #menu {
+        display:grid;   /* on affiche cette zone pour les grands écrans */
+        background-color:var(--cyber-yellow);  /* couleur de fond pour toute la colonne de gauche */
+        border:none;
+        border-radius: 0 5px 5px 0;
+        grid-template-areas: 'Ac' 'G' 'L' 'T' 'C' 'CV' 'Ad';
+        width: 100%;
+        position:relative;
+        top:0;
+        left:0;
+    }
+    
+    #menu a {
+        box-sizing:border-box;
+        float:none;     /* l'élément de menu n'est plus positionné en flottant */
+        padding: 0px 10px; 
+        margin:0px 10px;
+        height: 2em;
+        width:100%;     /* l'élément de menu occupe toute la largeur de sa zone (ul) */
+    }
+    
+    .hamburger{
+        display:none;
+    }
+
+    #index-gallery{
+        display:grid;
+        grid-template-rows:auto;
+        grid-gap:10px;
+        grid-template-areas:
+        "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+        "img1 img2 img3 img4"
+        "img5 img6 img3 img7";
+        width:100%;
+        height:auto;
+        margin: auto;
+    }
+}
